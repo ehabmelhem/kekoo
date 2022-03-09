@@ -1,0 +1,15 @@
+.vedio__container{
+    position: relative;
+    height: 800px;
+    overflow: scroll;
+    width: 80%;
+    max-width: 500px;
+    scroll-snap-type: y mandatory;
+}
+.vedio__container::-webkit-scrollbar{
+    display: none;
+}
+.vedio__container{
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+}

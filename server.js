@@ -21,8 +21,12 @@ db.once("open", () => {
   console.log("we are connected to DB");
 });
 
-const port = process.env.PORT || 3002;
+app.get("/",(req,res)=>{
+    res.send("hello kekoo");
+})
 
+const port = process.env.PORT || 3002;
+//test
 app.listen(port, () => {
   console.log("listen on port: ", port);
 });

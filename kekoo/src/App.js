@@ -1,12 +1,9 @@
 import './App.css';
-import "./View/Componenties/Header.css";
-
-// Imports The Compomenets:
-import Header from './View/Componenties/Header.js';
+import { useSelector, useDispatch } from "react-redux";
+import { Routes, Route, Link } from "react-router-dom";
 function App() {
   return (
-    <div className="App">
-      <Header></Header>
+    <div className="app">
     </div>
   );
 }

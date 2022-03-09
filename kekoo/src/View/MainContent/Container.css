@@ -1,4 +1,5 @@
 .vedio__container{
+    top: 40px;
     position: relative;
     height: 800px;
     overflow: scroll;

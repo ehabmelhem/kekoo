@@ -6,9 +6,9 @@ import "./Header.css"
 
 function Header() {
     return (
-        <header id="header" class="header">
-            <div class="container">
-                <div class="header__logo">
+        <header id="header" className="header">
+            <div className="container">
+                <div className="header__logo">
                     {/* <a href="/">
                         <img src="/Images\frontend24-white-171x30.png" alt="" />
                     </a> */}

@@ -15,8 +15,7 @@ function Header() {
                 </div>
                 <form className="flex">
                     <input
-                        autoFocus
-                        placeholder="todoapp..."
+                        placeholder="search..."
                         type="text"
                     />
                     <IconButton

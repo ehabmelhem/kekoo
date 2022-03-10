@@ -7,3 +7,13 @@
     scroll-snap-align: start;
     background-color: rgb(185, 130, 236);
 }
+.vedio_side_bar{
+    display: flex;
+    flex-direction: column;
+    width: fit-content;
+    position: absolute;
+    left: 10px;
+     -webkit-flex-direction: column;
+     bottom: 30%;
+     gap: 20px;
+}

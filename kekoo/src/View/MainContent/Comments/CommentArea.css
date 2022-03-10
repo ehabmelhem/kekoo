@@ -6,7 +6,8 @@
     border: 1px solid var(--form-border-color);
     height: 50%;
     height: 700px;
-    background-color: rgb(249, 239, 255);
+    background-color: var(--search-box-color);
+    /* background-color:  var(--comment-area-color); */
     position: relative;
     border-top-left-radius: 10px;
     border-top-right-radius: 10px;
@@ -20,7 +21,9 @@
     display: flex;
     align-items: center;
     border-radius: 999px;
-    background-color: rgb(238, 238, 238);
+    background-color:  var(--comment-type-box-color);
+    border:1px solid var( --form-border-color);
+
 }
 .comments__form>input{
     left: 0px;
@@ -29,9 +32,10 @@
     caret-color: rgb(185, 130, 236);
     outline: none;
     border: none;
-    background-color: rgb(238, 238, 238);
+    background-color: var(--comment-type-color);
     margin-left: 10px;
     color:rgb(185, 130, 236);
+
 
 }
 .comment_area_add__comment{

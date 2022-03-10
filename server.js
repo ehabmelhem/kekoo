@@ -8,6 +8,7 @@ app.use(cors());
 
 const mongoose = require("mongoose");
 app.use(bodyParser.json());
+app.use(express.static("kekoo/build"));
 
 
 mongoose.connect(

@@ -5,7 +5,7 @@
     height: 100%;
     width: 100%;
     scroll-snap-align: start;
-    background-color: rgb(185, 130, 236);
+    background-color: var(--video-color);
 }
 .vedio_side_bar{
     display: flex;

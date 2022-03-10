@@ -17,3 +17,8 @@
      bottom: 30%;
      gap: 20px;
 }
+.vedio_comment{
+    position: absolute;
+    bottom: 0px;
+    width: 100%;
+}

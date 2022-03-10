@@ -13,6 +13,8 @@ function Header() {
                         <img src="/Images\frontend24-white-171x30.png" alt="" />
                     </a> */}
                 </div>
+                <center>
+
                 <form className="flex">
                     <input
                         placeholder="search..."
@@ -24,6 +26,8 @@ function Header() {
                         <SearchIcon />
                     </IconButton>
                 </form>
+                </center>
+
                 <IconButton>
                     <MoreVertIcon />
                 </IconButton>

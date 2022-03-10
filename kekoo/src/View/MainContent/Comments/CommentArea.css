@@ -31,5 +31,9 @@
     border: none;
     background-color: rgb(238, 238, 238);
     margin-left: 10px;
+    color:rgb(185, 130, 236);
 
+}
+.comment_area_add__comment{
+    color:rgb(185, 130, 236) !important;
 }

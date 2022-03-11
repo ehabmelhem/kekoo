@@ -21,8 +21,8 @@ function CommentArea() {
                         value={commenContent}
                         onChange={starTypeOnCommentInput}
                         type="text" placeholder='comment...' />
-                    <IconButton className={commenContent && 'comment_area_add__comment'} onClick={addCommentToCommentArea}
-                        disabled={!commenContent} type='submit'>
+                    <IconButton className={commenContent && 'comment_area_add__comment'} onClick={addCommentToCommentArea} 
+                        disabled={!commenContent}  type='submit'>
                         <AddIcon />
                     </IconButton>
                 </form>

@@ -1,4 +1,4 @@
-.vedio__container{
+.video__container{
     top: 40px;
     position: relative;
     height: 800px;
@@ -7,10 +7,10 @@
     max-width: 500px;
     scroll-snap-type: y mandatory;
 }
-.vedio__container::-webkit-scrollbar{
+.video__container::-webkit-scrollbar{
     display: none;
 }
-.vedio__container{
+.video__container{
     -ms-overflow-style: none;
     scrollbar-width: none;
 }

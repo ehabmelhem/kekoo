@@ -1,4 +1,4 @@
-.vedio{
+.video{
     border-radius: 20px;
     position: relative;
     /* border: 1px solid black; */
@@ -7,7 +7,7 @@
     scroll-snap-align: start;
     background-color: var(--video-color);
 }
-.vedio_side_bar{
+.video_side_bar{
     display: flex;
     flex-direction: column;
     width: fit-content;
@@ -17,7 +17,7 @@
      bottom: 30%;
      gap: 20px;
 }
-.vedio_comment{
+.video_comment{
     position: absolute;
     bottom: 0px;
     width: 100%;

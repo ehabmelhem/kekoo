@@ -1,15 +1,15 @@
 import React from 'react'
 import "./Container.css"
-import Vedio from './Vedio'
+import Video from './Video'
 function Container() {
     return (
     <center>
-        <div className='vedio__container'>
-                <Vedio/>
-                <Vedio/>
-                <Vedio/>
-                <Vedio/>
-                <Vedio/>
+        <div className='video__container'>
+                <Video/>
+                <Video/>
+                <Video/>
+                <Video/>
+                <Video/>
         </div>
     </center>
 

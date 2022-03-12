@@ -8,10 +8,10 @@ const VideosContainer = props => {
     return (
         <div>
             <TransitionGroup className="showvideos">
-                    <VideoComponent name="Note 7" price="30$"></VideoComponent>
-                    <VideoComponent name="Iphone 11" price="230$"></VideoComponent>
-                    <VideoComponent name="Xiami 12" price="140$"> </VideoComponent>
-                    <VideoComponent name="Note 10" price="90$" ></VideoComponent>
+                    <VideoComponent name="Note 7" price={30} hasDiscount={true} newPrice={20}></VideoComponent>
+                    <VideoComponent name="Iphone 11" price={30} hasDiscount={true} newPrice={20}></VideoComponent>
+                    <VideoComponent name="Xiami 12" price={30} hasDiscount={true} newPrice={20}> </VideoComponent>
+                    <VideoComponent name="Note 10" price={30} hasDiscount={true} newPrice={20} ></VideoComponent>
             </TransitionGroup>
 
         </div>

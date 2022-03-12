@@ -1,0 +1,67 @@
+  .card-wrapper {
+    position: relative;
+  }
+  
+  .card {
+    background-color: var(--video-color);
+    display: grid;
+    margin-top: 30px;
+    margin-left:10px ;
+    grid-template-rows: 30px;
+    justify-items: start;
+    align-items: start;
+    width: 200px;
+    min-height: 200px;
+    padding: 20px;
+    border-radius: 20px;
+    height: 10px;
+    background-image: linear-gradient(
+      135deg,
+      hsla(0, 0%, 100%, 0.6),
+      hsla(0, 0%, 100%, 0.1)
+    );
+  }
+  h4 {
+    margin-top: 10px;
+    margin-bottom: 10px;
+    font-family: Inter, sans-serif;
+    color: #18171d;
+    font-size: 24px;
+    line-height: 1.2em;
+    font-weight: 600;
+    letter-spacing: -1px;
+    text-transform: capitalize;
+  }
+  h6 {
+    margin-top: 0px;
+    margin-bottom: 10px;
+    opacity: 0.4;
+    font-family: Inter, sans-serif;
+    color: #18171d;
+    font-size: 12px;
+    line-height: 18px;
+    font-weight: 600;
+    text-transform: uppercase;
+  }
+  .card-pill {
+    left: 0px;
+    right: auto;
+    bottom: 0px;
+    display: flex;
+    overflow: hidden;
+    width: 100px;
+    opacity: 0.4;
+    font-family: Inter, sans-serif;
+    color: #000;
+    font-size: 12px;
+    font-weight: 500;
+    text-transform: uppercase;
+    justify-self: start;
+    align-self: end;
+  }
+.showvideos {
+    display: grid;
+  grid-template-columns: repeat(auto-fill, 220px);
+  grid-gap: 20px;
+  }
+  

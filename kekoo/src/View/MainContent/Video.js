@@ -1,6 +1,6 @@
 import * as React from 'react'
-import "./Vedio.css"
-import VedioHeader from './VedioHeader'
+import "./Video.css"
+import VideoHeader from './VideoHeader'
 import FavoriteBorderIcon from '@mui/icons-material/FavoriteBorder';
 import FavoriteIcon from '@mui/icons-material/Favorite';
 import AddCommentIcon from '@mui/icons-material/AddComment';
@@ -33,7 +33,7 @@ const StyledGrid = styled.div`
   }
 `;
 
-function Vedio() {
+function Video() {
   const [isLiked, setIsLiked] = React.useState(false);
   const [openCommentArea, setOpenCommentArea] = React.useState(false);
   const addLike = () => {
@@ -43,10 +43,10 @@ function Vedio() {
     setOpenCommentArea(true);
   }
   return (
-    <div className='vedio'>
-      <VedioHeader />
-      this is out vedio
-      <div className="vedio_side_bar">
+    <div className='video'>
+      <VideoHeader />
+      this is out video
+      <div className="video_side_bar">
         <IconButton onClick={addLike}>
           {
             !isLiked ?
@@ -63,7 +63,7 @@ function Vedio() {
         </IconButton>
       </div>
 
-      <div className="vedio_comment">
+      <div className="video_comment">
         <TransitionGroup component={StyledGrid}>
           {
             openCommentArea &&
@@ -81,4 +81,4 @@ function Vedio() {
   )
 }
 
-export default Vedio
+export default Video

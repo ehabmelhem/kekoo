@@ -1,8 +1,10 @@
-import React from 'react'
+import * as React from 'react'
 import "./Container.css"
+import ImageCard from "../IntegrateImageVideoCard/ImageCard"
 import Video from './Video'
 const videos = [1, 2, 3, 4];
 function Container() {
+    const [showImageCardFlag, setShowImageCardFlag] = React.useState({})
     return (
         <center>
             <div className='video__container'>
@@ -10,7 +12,13 @@ function Container() {
                     videos.map((video, index) => {
                         return (
                             <div className="video_slid">
-                                <Video key={index} />
+                                {
+                                    showImageCardFlag[index] &&
+                                    <div className="video_container_image_card">
+                                        <ImageCard Index={index} />
+                                    </div>
+                                }
+                                <Video key={index} index={index}  showImageCardFlag={showImageCardFlag} setShowImageCardFlag={setShowImageCardFlag}/>
                             </div>
                         )
                     })

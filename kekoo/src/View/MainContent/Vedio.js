@@ -28,7 +28,7 @@ const StyledGrid = styled.div`
   }
   .transition-exit-active {
     opacity: 0.01;
-    transform: translate(0, 10px);
+    transform: translate(0, -10px);
     transition: all 300ms ease-in;
   }
 `;

@@ -3,6 +3,10 @@ import { useSelector, useDispatch } from "react-redux";
 import { Routes, Route, Link } from "react-router-dom";
 import Header from "./View/Componenties/Header"
 import Container from './View/MainContent/Container';
+import ImageComponent from './View/Router/Catagory/gProducts_images/Componenties/ImageComponent';
+import ImgContainer from './View/Router/Catagory/gProducts_images/ImgContainer'
+import VideosContainer from './View/Router/Catagory/gProducts_videos/VideosContainer'
+
 function AppContainer() {
   return (
     <div className='app_container'>
@@ -14,15 +18,15 @@ function AppContainer() {
 function ImagesPage() {
   return (
     <div>
-      Hi this is the Images page
+      <ImgContainer/>
     </div>
   )
 }
 function VideoCategoryPage() {
   return (
     <div>
-      Hi this is the video category page
-    </div>
+<VideosContainer/>    
+</div>
   )
 }
 function App() {

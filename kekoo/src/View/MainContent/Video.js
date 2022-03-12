@@ -9,6 +9,7 @@ import IconButton from '@mui/material/IconButton';
 import CommentArea from "./Comments/CommentArea"
 import styled from "styled-components";
 import { TransitionGroup, CSSTransition } from "react-transition-group";
+import PayCompenet from "./PayCompenet";
 
 const StyledGrid = styled.div`
   grid-template-columns: repeat(auto-fill, 220px);
@@ -69,12 +70,20 @@ function Video() {
             openCommentArea &&
             // animation CSS for comment (open)
             <CSSTransition timeout={1000} classNames="transition">
-              <CommentArea />
+              <CommentArea openCommentArea={openCommentArea} setOpenCommentArea={setOpenCommentArea} />
             </CSSTransition>
           }
         </TransitionGroup>
 
         {/* <CommentArea/> */}
+
+        <div className="video_pay_place">
+          {
+            !openCommentArea &&
+            <PayCompenet />
+          }
+
+        </div>
 
       </div>
     </div>

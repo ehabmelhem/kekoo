@@ -2,6 +2,8 @@ import * as React from 'react'
 import "./Container.css"
 import ImageCard from "../IntegrateImageVideoCard/ImageCard"
 import Video from './Video'
+import ChatbotComponent from './Chatbot/Componenties/ChatbotComponent'
+
 const videos = [1, 2, 3, 4];
 function Container() {
     const [showImageCardFlag, setShowImageCardFlag] = React.useState({})
@@ -24,6 +26,9 @@ function Container() {
                     })
                 }
             </div>
+           
+
+
         </center>
 
     )

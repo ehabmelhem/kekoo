@@ -21,6 +21,12 @@
       hsla(0, 0%, 100%, 0.1)
     );
   }
+  .card:hover {
+    opacity: 0.9;
+    transform: scale(1.01);
+    cursor: pointer;
+  }
+
   h4 {
     margin-top: 10px;
     margin-bottom: 10px;
@@ -64,4 +70,3 @@
   grid-template-columns: repeat(auto-fill, 220px);
   grid-gap: 20px;
   }
-  

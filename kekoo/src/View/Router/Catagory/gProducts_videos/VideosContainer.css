@@ -1,7 +1,11 @@
   .card-wrapper {
     position: relative;
   }
-  
+  .discount_price_line{
+    text-decoration-line:line-through;
+    text-decoration-style:solid ;
+    margin-right: 10px;
+  }
   .card {
     background-color: var(--video-color);
     display: grid;
@@ -55,15 +59,17 @@
     bottom: 0px;
     display: flex;
     overflow: hidden;
-    width: 100px;
+    width: 100px; 
+    max-width: 140px;
     opacity: 0.4;
     font-family: Inter, sans-serif;
     color: #000;
     font-size: 12px;
     font-weight: 500;
     text-transform: uppercase;
-    justify-self: start;
+    justify-self: start; 
     align-self: end;
+    flex-wrap: wrap;
   }
 .showvideos {
     display: grid;

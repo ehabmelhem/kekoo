@@ -6,6 +6,8 @@
     width: 80%;
     max-width: 500px;
     scroll-snap-type: y mandatory;
+    border: 1px solid black;
+    
 }
 .video__container::-webkit-scrollbar{
     display: none;
@@ -20,4 +22,9 @@
     border-bottom: 1px solid lightgray;
     padding-bottom: 10px;
     padding-top:10px ;
+    display: flex;
 }
+/* .video_container_image_card{
+    position: absolute;
+    left: 100px;
+} */

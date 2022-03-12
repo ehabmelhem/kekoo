@@ -10,7 +10,9 @@ import CommentArea from "./Comments/CommentArea"
 import styled from "styled-components";
 import { TransitionGroup, CSSTransition } from "react-transition-group";
 import PayCompenet from "./PayCompenet";
-
+import ImageIcon from '@mui/icons-material/Image';
+import Tooltip from '@mui/material/Tooltip';
+import SwipeableButton from "../../Items/SwipeableButton/SwipeableButton"
 const StyledGrid = styled.div`
   grid-template-columns: repeat(auto-fill, 220px);
   grid-gap: 20px;
@@ -34,7 +36,7 @@ const StyledGrid = styled.div`
   }
 `;
 
-function Video() {
+function Video({ index, showImageCardFlag, setShowImageCardFlag }) {
   const [isLiked, setIsLiked] = React.useState(false);
   const [openCommentArea, setOpenCommentArea] = React.useState(false);
   const addLike = () => {
@@ -42,6 +44,19 @@ function Video() {
   }
   const clickOnCommentIcon = () => {
     setOpenCommentArea(true);
+  }
+  const onSuccess = () => {
+    console.log('Yay! Swipe Success');
+  }
+  const handleShowImages = () => {
+    let temp = { ...showImageCardFlag };
+    if (temp[index] === true) {
+      temp[index] = false;
+    }
+    else {
+      temp[index] = true;
+    }
+    setShowImageCardFlag({ ...temp });
   }
   return (
     <div className='video'>
@@ -59,6 +74,9 @@ function Video() {
         <IconButton onClick={clickOnCommentIcon}>
           <AddCommentIcon />
         </IconButton>
+        <Tooltip title="Show Image">
+          <IconButton onClick={handleShowImages} className='video_image_icon'><ImageIcon /></IconButton>
+        </Tooltip>
         <IconButton>
           <ShareIcon />
         </IconButton>
@@ -82,9 +100,8 @@ function Video() {
             !openCommentArea &&
             <PayCompenet />
           }
-
         </div>
-
+        {/* <SwipeableButton onSuccess={onSuccess} color='#6ab04c' text='SLIDE TO UNLOCK' /> */}
       </div>
     </div>
   )

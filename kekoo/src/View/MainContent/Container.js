@@ -1,15 +1,21 @@
 import React from 'react'
 import "./Container.css"
 import Video from './Video'
+const videos = [1,2,3,4];
 function Container() {
     return (
     <center>
         <div className='video__container'>
-                <Video/>
-                <Video/>
-                <Video/>
-                <Video/>
-                <Video/>
+            {
+                videos.map((video,index)=>{
+                    return (
+                        <div className="video_slid">
+                                        <Video/>
+
+                        </div>
+                    )
+                })
+            }
         </div>
     </center>
 

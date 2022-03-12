@@ -2,14 +2,20 @@ import * as React from 'react'
 import IconButton from '@mui/material/IconButton';
 import SearchIcon from '@mui/icons-material/Search';
 import MoreVertIcon from '@mui/icons-material/MoreVert';
+import MicIcon from '@mui/icons-material/Mic';
 import "./Header.css"
 
 function Header() {
-    const [searchInput,setSearchInput]=React.useState('')
-    const onClickSearchHandler = (e)=>{
+    const [searchInput, setSearchInput] = React.useState('')
+    const onClickSearchHandler = (e) => {
         e.preventDefault();
+        setSearchInput("");
     }
-    
+
+    const onChangeSearchInput = (e) => {
+        setSearchInput(e.target.value);
+    }
+
     return (
         <header id="header" className="header">
             <div className="container">
@@ -20,19 +26,25 @@ function Header() {
                 </div>
                 <center>
 
-                <form className="flex">
-                    <input
-                        placeholder="search..."
-                        type="text"
+                    <form className="flex">
+                        <input
+                            onChange={onChangeSearchInput}
+                            placeholder="search..."
+                            type="text"
 
-                    />
-                    <IconButton
-                    onClick={onClickSearchHandler}
-                        type="submit"
-                    >
-                        <SearchIcon />
-                    </IconButton>
-                </form>
+                        />
+                        <IconButton>
+                            <MicIcon />
+                        </IconButton>
+                        <div className="pipline"></div>
+                        <IconButton
+                            disabled={!searchInput}
+                            onClick={onClickSearchHandler}
+                            type="submit"
+                        >
+                            <SearchIcon />
+                        </IconButton>
+                    </form>
                 </center>
 
                 <IconButton>

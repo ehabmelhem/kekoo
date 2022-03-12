@@ -6,7 +6,6 @@
     width: 80%;
     max-width: 500px;
     scroll-snap-type: y mandatory;
-    border: 1px solid black;
     
 }
 .video__container::-webkit-scrollbar{

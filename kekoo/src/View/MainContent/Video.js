@@ -76,9 +76,14 @@ function Video() {
         </TransitionGroup>
 
         {/* <CommentArea/> */}
+
         <div className="video_pay_place">
-            <PayCompenet/>
-          </div>
+          {
+            !openCommentArea &&
+            <PayCompenet />
+          }
+
+        </div>
 
       </div>
     </div>

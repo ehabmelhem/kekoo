@@ -8,7 +8,14 @@ const ImageComponent = props => {
       <div className="card">
         <h6>{props.name}</h6>
         <h4></h4>
-        <div className="card-pill">{props.price}</div>
+        <div className="card-pill">
+          {
+            props.hasDiscount &&
+            <div className="discount_price_line">
+              {`${props.price} `}
+            </div>
+          }
+          {props.hasDiscount ? `${props.newPrice}` : props.price}$</div>
       </div>
     </div>
   );

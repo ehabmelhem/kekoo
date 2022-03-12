@@ -1,10 +1,15 @@
-import React from 'react'
+import * as React from 'react'
 import IconButton from '@mui/material/IconButton';
 import SearchIcon from '@mui/icons-material/Search';
 import MoreVertIcon from '@mui/icons-material/MoreVert';
 import "./Header.css"
 
 function Header() {
+    const [searchInput,setSearchInput]=React.useState('')
+    const onClickSearchHandler = (e)=>{
+        e.preventDefault();
+    }
+    
     return (
         <header id="header" className="header">
             <div className="container">
@@ -19,8 +24,10 @@ function Header() {
                     <input
                         placeholder="search..."
                         type="text"
+
                     />
                     <IconButton
+                    onClick={onClickSearchHandler}
                         type="submit"
                     >
                         <SearchIcon />

@@ -1,5 +1,5 @@
 import React from 'react'
-import "./VedioHeader.css"
+import "./VideoHeader.css"
 import Avatar from '@mui/material/Avatar';
 import IconButton from '@mui/material/IconButton';
 import Tooltip from '@mui/material/Tooltip';
@@ -32,9 +32,9 @@ function stringToColor(string) {
     };
   }
   
-function VedioHeader() {
+function VideoHeader() {
     return (
-        <div className='vedio__header'>
+        <div className='video__header'>
             <Tooltip title="Ehab Melhem">
                 <IconButton
                     size="small"
@@ -45,11 +45,11 @@ function VedioHeader() {
                 </IconButton>
             </Tooltip>
 
-            <div className="vedioheader__content">
-                my vedio content
+            <div className="videoheader__content">
+                my video content
             </div>
         </div>
     )
 }
 
-export default VedioHeader
+export default VideoHeader

@@ -11,8 +11,8 @@
     position: relative;
     border-top-left-radius: 10px;
     border-top-right-radius: 10px;
-
 }
+
 .comments__form{
     position: absolute;
     width: 100%;
@@ -41,3 +41,6 @@
 .comment_area_add__comment{
     color:rgb(185, 130, 236) !important;
 }
+
+
+

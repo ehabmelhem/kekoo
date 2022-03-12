@@ -2,8 +2,9 @@ import * as React from 'react'
 import "./CommentArea.css";
 import AddIcon from '@mui/icons-material/Add';
 import IconButton from '@mui/material/IconButton';
+import CloseIcon from '@mui/icons-material/Close';
 
-function CommentArea() {
+function CommentArea({openCommentArea, setOpenCommentArea}) {
     const [commenContent, setCommentContent] = React.useState('');
     const starTypeOnCommentInput = (e) => {
         setCommentContent(e.target.value)
@@ -11,11 +12,16 @@ function CommentArea() {
     const addCommentToCommentArea = (e) => {
         e.preventDefault();
         setCommentContent('');
-
+    }
+    const closeCommentArea = ()=>{
+        setOpenCommentArea(false);
     }
     return (
         <div className='comment_area'>
             <div className="comment_area_content">
+                <IconButton className='comments_area_close_icon' onClick={closeCommentArea}>
+                    <CloseIcon/>
+                </IconButton>
                 <form className='comments__form'>
                     <input
                         value={commenContent}

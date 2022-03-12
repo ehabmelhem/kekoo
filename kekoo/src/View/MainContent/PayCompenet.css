@@ -1,0 +1,15 @@
+.pay_button{
+    border-radius: 999px;
+    width: 100%;
+    padding: 15px;
+    outline: none;
+    border: none;
+    background-color: rgb(200, 74, 238); 
+    color: white;
+}
+.pay_button:hover{
+    border: 1px solid rgb(200, 74, 238);
+    color: rgb(200, 74, 238); ;
+    background-color: white;
+    cursor: pointer;
+}

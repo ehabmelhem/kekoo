@@ -6,6 +6,7 @@ import Container from './View/MainContent/Container';
 import ImageComponent from './View/Router/Catagory/gProducts_images/Componenties/ImageComponent';
 import ImgContainer from './View/Router/Catagory/gProducts_images/ImgContainer'
 import VideosContainer from './View/Router/Catagory/gProducts_videos/VideosContainer'
+import ChatbotComponent from './View/MainContent/Chatbot/Componenties/ChatbotComponent'
 
 function AppContainer() {
   return (
@@ -38,6 +39,7 @@ function App() {
         <Route path="/gimages" element={<ImagesPage />} />
         <Route path="/gvideos" element={<VideoCategoryPage />} />
       </Routes>
+      <ChatbotComponent/>
     </div>
   );
 }

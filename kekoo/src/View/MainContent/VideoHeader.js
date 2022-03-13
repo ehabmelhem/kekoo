@@ -35,6 +35,7 @@ function stringToColor(string) {
 function VideoHeader() {
     return (
         <div className='video__header'>
+
             <Tooltip title="Ehab Melhem">
                 <IconButton
                     size="small"

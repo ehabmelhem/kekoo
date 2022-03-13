@@ -12,7 +12,7 @@ import { TransitionGroup, CSSTransition } from "react-transition-group";
 import PayCompenet from "./PayCompenet";
 import ImageIcon from '@mui/icons-material/Image';
 import Tooltip from '@mui/material/Tooltip';
-import SwipeableButton from "../../Items/SwipeableButton/SwipeableButton"
+
 const StyledGrid = styled.div`
   grid-template-columns: repeat(auto-fill, 220px);
   grid-gap: 20px;
@@ -36,7 +36,7 @@ const StyledGrid = styled.div`
   }
 `;
 
-function Video({ index, showImageCardFlag, setShowImageCardFlag }) {
+function Video({ index }) {
   const [isLiked, setIsLiked] = React.useState(false);
   const [openCommentArea, setOpenCommentArea] = React.useState(false);
   const [toggle, setToggle] = React.useState(true)
@@ -51,14 +51,7 @@ function Video({ index, showImageCardFlag, setShowImageCardFlag }) {
     console.log('Yay! Swipe Success');
   }
   const handleShowImages = () => {
-    let temp = { ...showImageCardFlag };
-    if (temp[index] === true) {
-      temp[index] = false;
-    }
-    else {
-      temp[index] = true;
-    }
-    setShowImageCardFlag({ ...temp });
+ 
   }
   return (
     <div className='video' onDoubleClick={() => {
@@ -80,9 +73,9 @@ function Video({ index, showImageCardFlag, setShowImageCardFlag }) {
         <IconButton onClick={clickOnCommentIcon}>
           <AddCommentIcon />
         </IconButton>
-        <Tooltip title="Show Image">
-          <IconButton onClick={handleShowImages} className='video_image_icon'><ImageIcon /></IconButton>
-        </Tooltip>
+        {/* <Tooltip title="Show Image"> */}
+          {/* <IconButton onClick={handleShowImages} className='video_image_icon'><ImageIcon /></IconButton> */}
+        {/* </Tooltip> */}
         <IconButton>
           <ShareIcon />
         </IconButton>

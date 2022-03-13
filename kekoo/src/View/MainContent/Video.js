@@ -98,14 +98,14 @@ function Video({ index }) {
   }
 
   return (
+<div className='video' onDoubleClick={doubleclickOnVideo}> 
+// double click for like ..:
 
       <video ref={videoRef} onClick={onClickVideoHandler} className='video__player' loop src="https://v16-webapp.tiktok.com/988df1451c2d5c1d7d837e22d2e390ec/622eb936/video/tos/alisg/tos-alisg-pve-0037c001/2e465ff511ed4496a86d55e83a2e3d2a/?a=1988&br=890&bt=445&cd=0%7C0%7C1%7C0&ch=0&cr=0&cs=0&cv=1&dr=0&ds=3&er=&ft=XOQ9-39Znz7ThCMbvDXq&l=20220313214010010245040057048C972B&lr=tiktok_m&mime_type=video_mp4&net=0&pl=0&qs=0&rc=M3c7ZzY6Zm4zOjMzODczNEApZjZlZmZpOjs2N2dkNTs0ZGdoM2gucjQwZmRgLS1kMS1zczIvYWNgYjYvMV4yNS82MzU6Yw%3D%3D&vl=&vr="></video>
 
       <VideoHeader />
  
 
-// double click for like ..:
-<div className='video' onDoubleClick={doubleclickOnVideo}> 
       <VideoHeader />
       {/* <AnimationForLike/> */}
       this is out video

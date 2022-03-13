@@ -6,6 +6,8 @@
     width: 100%;
     scroll-snap-align: start;
     background-color: var(--video-color);
+    margin-top: 3px;
+    /* border-radius: 20px; */
 }
 .video_side_bar{
     display: flex;
@@ -29,4 +31,13 @@
     left: 45%;
     width: fit-content;
 
+}
+.video__player{
+    background-color: var(--video-color);
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    border-radius: 20px;
+    border: 1px solid  var( --form-border-color);
 }

@@ -2,7 +2,7 @@ import React from 'react'
 import "./ImageCard.css"
 function ImageCard() {
   return (
-    <div>ImageCard</div>
+    <div className='video_image_card'>ImageCard</div>
   )
 }
 

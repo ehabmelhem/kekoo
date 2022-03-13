@@ -34,7 +34,6 @@ function App() {
   return (
     <div className="app">
       <Header />
-      
       <Routes>
         <Route path="/" element={<AppContainer />} />
         <Route path="/gimages" element={<ImagesPage />} />

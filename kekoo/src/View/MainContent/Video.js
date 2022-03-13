@@ -39,6 +39,8 @@ const StyledGrid = styled.div`
 function Video({ index, showImageCardFlag, setShowImageCardFlag }) {
   const [isLiked, setIsLiked] = React.useState(false);
   const [openCommentArea, setOpenCommentArea] = React.useState(false);
+  const [toggle, setToggle] = React.useState(true)
+  
   const addLike = () => {
     setIsLiked(!isLiked);
   }
@@ -59,10 +61,14 @@ function Video({ index, showImageCardFlag, setShowImageCardFlag }) {
     setShowImageCardFlag({ ...temp });
   }
   return (
-    <div className='video'>
+    <div className='video' onDoubleClick={() => {
+      setIsLiked(!isLiked)
+    }}>
+
       <VideoHeader />
       this is out video
       <div className="video_side_bar">
+
         <IconButton onClick={addLike}>
           {
             !isLiked ?

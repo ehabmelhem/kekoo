@@ -12,7 +12,7 @@ import { TransitionGroup, CSSTransition } from "react-transition-group";
 import PayCompenet from "./PayCompenet";
 import ImageIcon from '@mui/icons-material/Image';
 import Tooltip from '@mui/material/Tooltip';
-
+import useElementOnScreen from "../hooks/useElementOnScreen";
 const StyledGrid = styled.div`
   grid-template-columns: repeat(auto-fill, 220px);
   grid-gap: 20px;
@@ -40,7 +40,8 @@ function Video({ index }) {
   const [isLiked, setIsLiked] = React.useState(false);
   const [openCommentArea, setOpenCommentArea] = React.useState(false);
   const [toggle, setToggle] = React.useState(true)
-  
+  const [playVideo, setPlayVideo] = React.useState(false);
+  const videoRef = React.useRef();
   const addLike = () => {
     setIsLiked(!isLiked);
   }
@@ -51,15 +52,53 @@ function Video({ index }) {
     console.log('Yay! Swipe Success');
   }
   const handleShowImages = () => {
- 
+
   }
+  const onClickVideoHandler = () => {
+    if (playVideo) {
+      videoRef.current.pause();
+      setPlayVideo(false)
+      videoRef.current.currentTime = 0;
+    }
+    else {
+      videoRef.current.play();
+      setPlayVideo(true);
+    }
+
+  }
+  const options = {
+    root: null,
+    rootMargin: '0px',
+    threshold: 0.3
+  }
+  const isVisibile = useElementOnScreen(options, videoRef)
+
+  React.useEffect(() => {
+    if (isVisibile) {
+      if (!playVideo) {
+        console.log(videoRef)
+        videoRef.current.play();
+        setPlayVideo(true)
+
+      }
+    }
+    else {
+      if (playVideo) {
+        videoRef.current.pause();
+        setPlayVideo(false);
+        videoRef.current.currentTime = 0;
+      }
+    }
+  }, [isVisibile])
+
   return (
     <div className='video' onDoubleClick={() => {
       setIsLiked(!isLiked)
     }}>
 
+      <video ref={videoRef} onClick={onClickVideoHandler} className='video__player' loop src="https://v16-webapp.tiktok.com/988df1451c2d5c1d7d837e22d2e390ec/622eb936/video/tos/alisg/tos-alisg-pve-0037c001/2e465ff511ed4496a86d55e83a2e3d2a/?a=1988&br=890&bt=445&cd=0%7C0%7C1%7C0&ch=0&cr=0&cs=0&cv=1&dr=0&ds=3&er=&ft=XOQ9-39Znz7ThCMbvDXq&l=20220313214010010245040057048C972B&lr=tiktok_m&mime_type=video_mp4&net=0&pl=0&qs=0&rc=M3c7ZzY6Zm4zOjMzODczNEApZjZlZmZpOjs2N2dkNTs0ZGdoM2gucjQwZmRgLS1kMS1zczIvYWNgYjYvMV4yNS82MzU6Yw%3D%3D&vl=&vr="></video>
+
       <VideoHeader />
-      this is out video
       <div className="video_side_bar">
 
         <IconButton onClick={addLike}>
@@ -74,7 +113,7 @@ function Video({ index }) {
           <AddCommentIcon />
         </IconButton>
         {/* <Tooltip title="Show Image"> */}
-          {/* <IconButton onClick={handleShowImages} className='video_image_icon'><ImageIcon /></IconButton> */}
+        {/* <IconButton onClick={handleShowImages} className='video_image_icon'><ImageIcon /></IconButton> */}
         {/* </Tooltip> */}
         <IconButton>
           <ShareIcon />

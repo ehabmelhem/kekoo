@@ -5,8 +5,8 @@ import SmartToyOutlinedIcon from '@mui/icons-material/SmartToyOutlined';
 
 function ChatbotComponent() {
   return (
-    <div class="mychatbot">
-      <SmartToyOutlinedIcon class="chatbotdisplay"></SmartToyOutlinedIcon>
+    <div className="mychatbot">
+      <SmartToyOutlinedIcon className="chatbotdisplay"></SmartToyOutlinedIcon>
     </div>
   )
 }

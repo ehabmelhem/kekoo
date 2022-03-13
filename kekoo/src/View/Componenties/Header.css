@@ -11,7 +11,7 @@ header {
   width: 100%;
   text-align: center;
   height: 65px;
-  box-shadow: 0 0px 30px rgba(0, 0, 0, 0.5);
+  box-shadow: 0 0px 5px rgba(0, 0, 0, 0.5);
   position: sticky;
   z-index: 999;
   top: 0;
@@ -56,11 +56,12 @@ header {
   }
 
   .header__logo{
-    width: 50px;
+    width: 150px;
     height: 50px;
     border-radius: 999px;
     background-color: black;
-    margin-left: 60px;
+    margin-left: 30px;
+    cursor: pointer;
 }
 .pipline{
   width: 1px;

@@ -1,10 +1,12 @@
 import React from 'react'
 import './ChatbotComponent.css';
+import ChatBubbleOutlineTwoToneIcon from '@mui/icons-material/ChatBubbleOutlineTwoTone';
+import SmartToyOutlinedIcon from '@mui/icons-material/SmartToyOutlined';
 
 function ChatbotComponent() {
   return (
-    <div className= "chatboot">
-      <img  className= "chatbotbutton" src="/Images/others/chatbot_icon.jpg" alt="" />
+    <div class="mychatbot">
+      <SmartToyOutlinedIcon class="chatbotdisplay"></SmartToyOutlinedIcon>
     </div>
   )
 }

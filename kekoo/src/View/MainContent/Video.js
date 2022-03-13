@@ -12,6 +12,7 @@ import { TransitionGroup, CSSTransition } from "react-transition-group";
 import PayCompenet from "./PayCompenet";
 import ImageIcon from '@mui/icons-material/Image';
 import Tooltip from '@mui/material/Tooltip';
+import AnimationForLike from './Componenties/AnimationForLike'
 
 const StyledGrid = styled.div`
   grid-template-columns: repeat(auto-fill, 220px);
@@ -53,15 +54,18 @@ function Video({ index }) {
   const handleShowImages = () => {
  
   }
-  return (
-    <div className='video' onDoubleClick={() => {
-      setIsLiked(!isLiked)
-    }}>
+  const doubleclickOnVideo = () => {
+    setIsLiked(!isLiked)
+  }
 
+  return (
+// double click for like ..:
+<div className='video' onDoubleClick={doubleclickOnVideo}> 
       <VideoHeader />
+      {/* <AnimationForLike/> */}
       this is out video
       <div className="video_side_bar">
-
+  
         <IconButton onClick={addLike}>
           {
             !isLiked ?

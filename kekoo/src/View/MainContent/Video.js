@@ -10,10 +10,7 @@ import CommentArea from "./Comments/CommentArea"
 import styled from "styled-components";
 import { TransitionGroup, CSSTransition } from "react-transition-group";
 import PayCompenet from "./PayCompenet";
-import ImageIcon from '@mui/icons-material/Image';
-import Tooltip from '@mui/material/Tooltip';
 import useElementOnScreen from "../hooks/useElementOnScreen";
-import useDoubleClick from "../hooks/useDoubleClick"
 import AnimationForLike from './Componenties/AnimationForLike'
 
 const StyledGrid = styled.div`
@@ -49,9 +46,6 @@ function Video({ url }) {
   const timerVideoClick = React.useRef(null);
   const oneClickTimer = React.useRef(null);
 
-  const [waitingClick, setWaitingClick] =
-    React.useState(null);
-  const [lastClick, setLastClick] = React.useState(0);
   const addLike = () => {
     setIsLiked(!isLiked);
   }
@@ -124,13 +118,8 @@ function Video({ url }) {
       }
     }
   }, [isVisibile])
-  const doubleclickOnVideo = () => {
-    console.log("I'm on double click on video")
-    setIsLiked(!isLiked)
-  }
-  const touch = (e)=>{
-    console.log(e.touches, e.type)
-  }
+
+ 
   return (
     <div className='video' >
 
@@ -138,12 +127,6 @@ function Video({ url }) {
         loop src={url}></video>
 
       <VideoHeader />
-
-
-// double click for like ..:
-      <VideoHeader />
-      {/* <AnimationForLike/> */}
-      this is out video
       <div className="video_side_bar">
 
         <IconButton onClick={addLike}>

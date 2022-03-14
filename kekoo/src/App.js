@@ -7,7 +7,7 @@ import ImageComponent from './View/Router/Catagory/gProducts_images/Componenties
 import ImgContainer from './View/Router/Catagory/gProducts_images/ImgContainer'
 import VideosContainer from './View/Router/Catagory/gProducts_videos/VideosContainer'
 import ChatbotComponent from './View/MainContent/Chatbot/Componenties/ChatbotComponent'
-
+import ProfilePage from "./View/Router/Catagory/ProfilePage/ProfilePage"
 function AppContainer() {
   return (
     <div className='app_container'>
@@ -30,6 +30,13 @@ function VideoCategoryPage() {
 </div>
   )
 }
+function Profilegage() {
+  return (
+    <div>
+<ProfilePage/>    
+</div>
+  )
+}
 function App() {
   return (
     <div className="app">
@@ -38,6 +45,7 @@ function App() {
         <Route path="/" element={<AppContainer />} />
         <Route path="/gimages" element={<ImagesPage />} />
         <Route path="/gvideos" element={<VideoCategoryPage />} />
+        <Route path="/profile" element={<Profilegage />} />
       </Routes>
       <ChatbotComponent/>
     </div>

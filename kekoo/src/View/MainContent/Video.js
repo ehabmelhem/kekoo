@@ -13,7 +13,7 @@ import PayCompenet from "./PayCompenet";
 import ImageIcon from '@mui/icons-material/Image';
 import Tooltip from '@mui/material/Tooltip';
 import useElementOnScreen from "../hooks/useElementOnScreen";
-
+import useDoubleClick from "../hooks/useDoubleClick"
 import AnimationForLike from './Componenties/AnimationForLike'
 
 const StyledGrid = styled.div`
@@ -39,12 +39,19 @@ const StyledGrid = styled.div`
   }
 `;
 
-function Video({ index }) {
+function Video({ url }) {
   const [isLiked, setIsLiked] = React.useState(false);
   const [openCommentArea, setOpenCommentArea] = React.useState(false);
   const [toggle, setToggle] = React.useState(true)
   const [playVideo, setPlayVideo] = React.useState(false);
   const videoRef = React.useRef();
+  const onClickVideoCounter = React.useRef(0);
+  const timerVideoClick = React.useRef(null);
+  const oneClickTimer = React.useRef(null);
+
+  const [waitingClick, setWaitingClick] =
+    React.useState(null);
+  const [lastClick, setLastClick] = React.useState(0);
   const addLike = () => {
     setIsLiked(!isLiked);
   }
@@ -57,11 +64,33 @@ function Video({ index }) {
   const handleShowImages = () => {
 
   }
-  const onClickVideoHandler = () => {
+  const onClickVideoHandler = (e) => {
+    let isDoubleClickFlag = false;
+    const isDoubleClick = onClickVideoCounter.current + 1 === 2;
+    const timerIsPresent = timerVideoClick.current;
+
+    if (timerIsPresent && isDoubleClick) {
+      clearTimeout(timerVideoClick.current);
+      timerVideoClick.current = null;
+      onClickVideoCounter.current = 0;
+      console.log("doubleClick")
+      isDoubleClickFlag = true;
+    }
+    if (!timerIsPresent) {
+      onClickVideoCounter.current = onClickVideoCounter.current + 1;
+      const timer = setTimeout(() => {
+        clearTimeout(timerVideoClick.current);
+        timerVideoClick.current = null;
+        onClickVideoCounter.current = 0;
+      }, 200)
+      console.log("single click")
+
+      timerVideoClick.current = timer;
+    }
     if (playVideo) {
       videoRef.current.pause();
       setPlayVideo(false)
-      videoRef.current.currentTime = 0;
+      // videoRef.current.currentTime = 0;
     }
     else {
       videoRef.current.play();
@@ -93,24 +122,28 @@ function Video({ index }) {
       }
     }
   }, [isVisibile])
- const doubleclickOnVideo = () => {
+  const doubleclickOnVideo = () => {
+    console.log("I'm on double click on video")
     setIsLiked(!isLiked)
   }
-
+  const touch = (e)=>{
+    console.log(e.touches, e.type)
+  }
   return (
-<div className='video' onDoubleClick={doubleclickOnVideo}> 
-// double click for like ..:
+    <div className='video' >
 
-      <video ref={videoRef} onClick={onClickVideoHandler} className='video__player' loop src="https://v16-webapp.tiktok.com/988df1451c2d5c1d7d837e22d2e390ec/622eb936/video/tos/alisg/tos-alisg-pve-0037c001/2e465ff511ed4496a86d55e83a2e3d2a/?a=1988&br=890&bt=445&cd=0%7C0%7C1%7C0&ch=0&cr=0&cs=0&cv=1&dr=0&ds=3&er=&ft=XOQ9-39Znz7ThCMbvDXq&l=20220313214010010245040057048C972B&lr=tiktok_m&mime_type=video_mp4&net=0&pl=0&qs=0&rc=M3c7ZzY6Zm4zOjMzODczNEApZjZlZmZpOjs2N2dkNTs0ZGdoM2gucjQwZmRgLS1kMS1zczIvYWNgYjYvMV4yNS82MzU6Yw%3D%3D&vl=&vr="></video>
+      <video playsInline autoPlay ref={videoRef}  onClick={onClickVideoHandler} className='video__player'
+        loop src={url}></video>
 
       <VideoHeader />
- 
 
+
+// double click for like ..:
       <VideoHeader />
       {/* <AnimationForLike/> */}
       this is out video
       <div className="video_side_bar">
-  
+
         <IconButton onClick={addLike}>
           {
             !isLiked ?

@@ -65,7 +65,7 @@ function Video({ url }) {
 
   }
   const onClickVideoHandler = (e) => {
-    let isDoubleClickFlag = false;
+    let isSingleClick = false;
     const isDoubleClick = onClickVideoCounter.current + 1 === 2;
     const timerIsPresent = timerVideoClick.current;
 
@@ -74,7 +74,7 @@ function Video({ url }) {
       timerVideoClick.current = null;
       onClickVideoCounter.current = 0;
       console.log("doubleClick")
-      isDoubleClickFlag = true;
+      setIsLiked(!isLiked)
     }
     if (!timerIsPresent) {
       onClickVideoCounter.current = onClickVideoCounter.current + 1;
@@ -82,20 +82,22 @@ function Video({ url }) {
         clearTimeout(timerVideoClick.current);
         timerVideoClick.current = null;
         onClickVideoCounter.current = 0;
+        isSingleClick = true;
+        console.log("single click")
+        if (playVideo) {
+          videoRef.current.pause();
+          setPlayVideo(false)
+          // videoRef.current.currentTime = 0;
+        }
+        else {
+          videoRef.current.play();
+          setPlayVideo(true);
+        }
       }, 200)
-      console.log("single click")
 
       timerVideoClick.current = timer;
     }
-    if (playVideo) {
-      videoRef.current.pause();
-      setPlayVideo(false)
-      // videoRef.current.currentTime = 0;
-    }
-    else {
-      videoRef.current.play();
-      setPlayVideo(true);
-    }
+    
 
   }
   const options = {

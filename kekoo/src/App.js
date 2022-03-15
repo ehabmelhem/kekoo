@@ -1,13 +1,15 @@
-import './App.css';
 import { useSelector, useDispatch } from "react-redux";
-import { Routes, Route, Link } from "react-router-dom";
+import { Routes, Link } from "react-router-dom";
 import Header from "./View/Componenties/Header"
 import Container from './View/MainContent/Container';
 import ImageComponent from './View/Router/Catagory/gProducts_images/Componenties/ImageComponent';
 import ImgContainer from './View/Router/Catagory/gProducts_images/ImgContainer'
 import VideosContainer from './View/Router/Catagory/gProducts_videos/VideosContainer'
 import ChatbotComponent from './View/MainContent/Chatbot/Componenties/ChatbotComponent'
-import ProfilePage from "./View/Router/Catagory/ProfilePage/ProfilePage"
+import ProfilePage from './View/Router/Account/ProfilePage'
+import { BrowserRouter as Router, Route } from 'react-router-dom';
+import './App.css'
+
 function AppContainer() {
   return (
     <div className='app_container'>
@@ -32,14 +34,15 @@ function VideoCategoryPage() {
 }
 function Profilegage() {
   return (
-    <div>
-<ProfilePage/>    
-</div>
+      <div className='app'>
+<ProfilePage></ProfilePage>
+      </div>
   )
 }
 function App() {
   return (
-    <div className="app">
+    <div>
+     
       <Header />
       <Routes>
         <Route path="/" element={<AppContainer />} />

@@ -32,11 +32,9 @@ function stringToColor(string) {
     };
   }
   
-function VideoHeader( { isDisplayOnProfile}) {
+function VideoHeader( ) {
     return (
         <div className='video__header'>
-            {// { check if the video is showing of profile or showing on home 
-      isDisplayOnProfile==false &&
             <Tooltip title="Ehab Melhem">
                 <IconButton
                     size="small"
@@ -46,12 +44,9 @@ function VideoHeader( { isDisplayOnProfile}) {
                     <Avatar sx={{ width: 60, height: 60 }}  {...stringAvatar('Ehab Melhem')} />
                 </IconButton>
             </Tooltip>
-}
- {// { check if the video is showing of profile or showing on home 
-      isDisplayOnProfile==false ?
             <div className="videoheader__content">
                 my video content
-            </div> : <h3></h3> }
+            </div>
         </div>
         
     )

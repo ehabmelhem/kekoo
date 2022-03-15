@@ -36,9 +36,8 @@ const StyledGrid = styled.div`
   }
 `;
 
-function Video({ url, isDisplayOnProfile}) {
+function Video({url}) {
   const [isLiked, setIsLiked] = React.useState(false);
-  const [DisplayOnProfile, setisDisplayOnProfile] = React.useState(isDisplayOnProfile);
 
   const [openCommentArea, setOpenCommentArea] = React.useState(false);
   const [toggle, setToggle] = React.useState(true)
@@ -128,11 +127,9 @@ function Video({ url, isDisplayOnProfile}) {
       <video playsInline autoPlay ref={videoRef}  onClick={onClickVideoHandler} className='video__player'
         loop src={url}></video>
    
-      <VideoHeader isDisplayOnProfile={DisplayOnProfile}/>
+      <VideoHeader />
       
       <div className="video_side_bar">
-      {// { check if the video is showing of profile or showing on home 
-      DisplayOnProfile==false &&
         <IconButton onClick={addLike}>
           {
             !isLiked ?
@@ -141,22 +138,15 @@ function Video({ url, isDisplayOnProfile}) {
               <FavoriteIcon />
           }
         </IconButton>
-        }
-         {// { check if the video is showing of profile or showing on home 
-      DisplayOnProfile==false &&
         <IconButton onClick={clickOnCommentIcon}>
           <AddCommentIcon />
         </IconButton>
-         }   
         {/* <Tooltip title="Show Image"> */}
         {/* <IconButton onClick={handleShowImages} className='video_image_icon'><ImageIcon /></IconButton> */}
         {/* </Tooltip> */}
-          {// { check if the video is showing of profile or showing on home 
-      DisplayOnProfile==false &&
         <IconButton>
           <ShareIcon />
         </IconButton>
-}
       </div>
 
       <div className="video_comment">
@@ -175,7 +165,7 @@ function Video({ url, isDisplayOnProfile}) {
         <div className="video_pay_place">
           
           {
-            !openCommentArea & DisplayOnProfile==false  &&
+            !openCommentArea   &&
             <PayCompenet />
           }
         </div>

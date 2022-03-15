@@ -36,8 +36,10 @@ const StyledGrid = styled.div`
   }
 `;
 
-function Video({ url }) {
+function Video({ url, isDisplayOnProfile}) {
   const [isLiked, setIsLiked] = React.useState(false);
+  const [DisplayOnProfile, setisDisplayOnProfile] = React.useState(isDisplayOnProfile);
+
   const [openCommentArea, setOpenCommentArea] = React.useState(false);
   const [toggle, setToggle] = React.useState(true)
   const [playVideo, setPlayVideo] = React.useState(false);
@@ -125,10 +127,12 @@ function Video({ url }) {
 
       <video playsInline autoPlay ref={videoRef}  onClick={onClickVideoHandler} className='video__player'
         loop src={url}></video>
-
-      <VideoHeader />
+   
+      <VideoHeader isDisplayOnProfile={DisplayOnProfile}/>
+      
       <div className="video_side_bar">
-
+      {// { check if the video is showing of profile or showing on home 
+      DisplayOnProfile==false &&
         <IconButton onClick={addLike}>
           {
             !isLiked ?
@@ -137,15 +141,22 @@ function Video({ url }) {
               <FavoriteIcon />
           }
         </IconButton>
+        }
+         {// { check if the video is showing of profile or showing on home 
+      DisplayOnProfile==false &&
         <IconButton onClick={clickOnCommentIcon}>
           <AddCommentIcon />
         </IconButton>
+         }   
         {/* <Tooltip title="Show Image"> */}
         {/* <IconButton onClick={handleShowImages} className='video_image_icon'><ImageIcon /></IconButton> */}
         {/* </Tooltip> */}
+          {// { check if the video is showing of profile or showing on home 
+      DisplayOnProfile==false &&
         <IconButton>
           <ShareIcon />
         </IconButton>
+}
       </div>
 
       <div className="video_comment">
@@ -162,8 +173,9 @@ function Video({ url }) {
         {/* <CommentArea/> */}
 
         <div className="video_pay_place">
+          
           {
-            !openCommentArea &&
+            !openCommentArea & DisplayOnProfile==false  &&
             <PayCompenet />
           }
         </div>

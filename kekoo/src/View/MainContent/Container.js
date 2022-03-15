@@ -10,16 +10,16 @@ import "swiper/swiper.min.css";
 SwiperCore.use([EffectCoverflow, Pagination]);
 
 const videosUrl=[{
-    url:"https://v16-webapp.tiktok.com/de9930831aac5310a1f8066d0a9db0c3/622fdb15/video/tos/alisg/tos-alisg-pve-0037c001/fbb2d5866bf04baaa0e6ce963c1a76eb/?a=1988&br=3376&bt=1688&cd=0%7C0%7C1%7C0&ch=0&cr=0&cs=0&cv=1&dr=0&ds=3&er=&ft=XOQ9-39Znz7Th7txvDXq&l=2022031418155601019216806605434C8C&lr=tiktok_m&mime_type=video_mp4&net=0&pl=0&qs=0&rc=M3Y2bjo6Zjo5OzMzODczNEApOmc4NDU3M2U4NzU1NDk6aGdgXjVwcjQwcWFgLS1kMS1zczUyNWEvNS4vNi5iXy1jLS06Yw%3D%3D&vl=&vr="
+    url:"https://v16-webapp.tiktok.com/1555e3f7cc28a3dd8a3bf37041287b8c/62303eb7/video/tos/alisg/tos-alisg-pve-0037c001/d0b1b640791b4c568f6153ab0f16e267/?a=1988&br=2026&bt=1013&cd=0%7C0%7C1%7C0&ch=0&cr=0&cs=0&cv=1&dr=0&ds=3&er=&ft=XOQ9-39Znz7Th1mdvDXq&l=202203150122170102450050271781A51F&lr=tiktok_m&mime_type=video_mp4&net=0&pl=0&qs=0&rc=Mzo8bWc6Zm5uOzMzODczNEApZzg2Njg0ZjtmN2c1OTU3NGdjaC41cjRfL2VgLS1kMS1zc14uMF4zLTRiNjReNF40NWI6Yw%3D%3D&vl=&vr="
 },
 {
-    url:"https://v16-webapp.tiktok.com/5bf4a3199ae4368404e631142804d951/622fdacc/video/tos/alisg/tos-alisg-pve-0037c001/ea77d4700833465797fa0c8e2c4311c0/?a=1988&br=6124&bt=3062&cd=0%7C0%7C1%7C0&ch=0&cr=0&cs=0&cv=1&dr=0&ds=3&er=&ft=XOQ9-39Znz7Th7txvDXq&l=2022031418155601019216806605434C8C&lr=tiktok_m&mime_type=video_mp4&net=0&pl=0&qs=0&rc=ajhoeTM6Zmk8OzMzODczNEApOmQ0NTs1aDw2NzM2NmZpZ2dqbC5rcjRfLWRgLS1kMS1zczI2Ly9gXjFfMS9jLmNfMi06Yw%3D%3D&vl=&vr="
+    url:"https://v16-webapp.tiktok.com/58dd0f3a74e87945ab1947515470d24b/62303f01/video/tos/alisg/tos-alisg-pve-0037c001/557f6f9f69d2460ea2e206a6785dc449/?a=1988&br=1628&bt=814&cd=0%7C0%7C1%7C0&ch=0&cr=0&cs=0&cv=1&dr=0&ds=3&er=&ft=XOQ9-39Znz7Th_idvDXq&l=202203150123330102451300940D81EE86&lr=tiktok_m&mime_type=video_mp4&net=0&pl=0&qs=0&rc=M29lajg6ZnRmOTMzODczNEApZTRpZzw5Z2VnNzlkZTU0Z2dzYy1gcjRfbHJgLS1kMS1zc2BiNWMyNWMyYl5gMzVhXjQ6Yw%3D%3D&vl=&vr="
 },
 {
-    url:"https://v16-webapp.tiktok.com/de9930831aac5310a1f8066d0a9db0c3/622fdb15/video/tos/alisg/tos-alisg-pve-0037c001/fbb2d5866bf04baaa0e6ce963c1a76eb/?a=1988&br=3376&bt=1688&cd=0%7C0%7C1%7C0&ch=0&cr=0&cs=0&cv=1&dr=0&ds=3&er=&ft=XOQ9-39Znz7Th7txvDXq&l=2022031418155601019216806605434C8C&lr=tiktok_m&mime_type=video_mp4&net=0&pl=0&qs=0&rc=M3Y2bjo6Zjo5OzMzODczNEApOmc4NDU3M2U4NzU1NDk6aGdgXjVwcjQwcWFgLS1kMS1zczUyNWEvNS4vNi5iXy1jLS06Yw%3D%3D&vl=&vr="
+    url:"https://v16-webapp.tiktok.com/66019e12ceb58a97f40eabd32d784e17/62303f46/video/tos/useast2a/tos-useast2a-ve-0068c003/74fd517da3d444e4a44c0fc5e57bbde5/?a=1988&br=2032&bt=1016&cd=0%7C0%7C1%7C0&ch=0&cr=0&cs=0&cv=1&dr=0&ds=3&er=&ft=XOQ9-39Znz7Th_idvDXq&l=202203150123330102451300940D81EE86&lr=tiktok&mime_type=video_mp4&net=0&pl=0&qs=0&rc=ajxvZGllaGV1NjMzNzgzM0ApOjU8Z2hoaDw4N2U1ZTxmN2dqM2VpcC9xZ2ZgLS1kLzZzczEyMWNhLzUxYjViMy0uMjM6Yw%3D%3D&vl=&vr="
 },
 {
-    url:"https://v16-webapp.tiktok.com/5bf4a3199ae4368404e631142804d951/622fdacc/video/tos/alisg/tos-alisg-pve-0037c001/ea77d4700833465797fa0c8e2c4311c0/?a=1988&br=6124&bt=3062&cd=0%7C0%7C1%7C0&ch=0&cr=0&cs=0&cv=1&dr=0&ds=3&er=&ft=XOQ9-39Znz7Th7txvDXq&l=2022031418155601019216806605434C8C&lr=tiktok_m&mime_type=video_mp4&net=0&pl=0&qs=0&rc=ajhoeTM6Zmk8OzMzODczNEApOmQ0NTs1aDw2NzM2NmZpZ2dqbC5rcjRfLWRgLS1kMS1zczI2Ly9gXjFfMS9jLmNfMi06Yw%3D%3D&vl=&vr="
+    url:"https://v16-webapp.tiktok.com/66019e12ceb58a97f40eabd32d784e17/62303f46/video/tos/useast2a/tos-useast2a-ve-0068c003/74fd517da3d444e4a44c0fc5e57bbde5/?a=1988&br=2032&bt=1016&cd=0%7C0%7C1%7C0&ch=0&cr=0&cs=0&cv=1&dr=0&ds=3&er=&ft=XOQ9-39Znz7Th_idvDXq&l=202203150123330102451300940D81EE86&lr=tiktok&mime_type=video_mp4&net=0&pl=0&qs=0&rc=ajxvZGllaGV1NjMzNzgzM0ApOjU8Z2hoaDw4N2U1ZTxmN2dqM2VpcC9xZ2ZgLS1kLzZzczEyMWNhLzUxYjViMy0uMjM6Yw%3D%3D&vl=&vr="
 },
 ]
 
@@ -57,7 +57,7 @@ function Container() {
                                             </div>
                                     </SwiperSlide>
                                     <SwiperSlide key={`${index+1}`}>
-                                        <Video url={videosUrl[index].url} className="swiper-slide-active" key={index} index={index} />
+                                        <Video url={videosUrl[index].url} isDisplayOnProfile={false} className="swiper-slide-active" key={index} index={index} />
                                     </SwiperSlide>
 
                                 </div>

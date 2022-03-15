@@ -38,6 +38,10 @@ function Header() {
         handleClose();
         navigate('/gvideos');
     }
+    const handleRedirectRouterProfile = ()=> {
+        handleClose();
+        navigate('/profile');
+    }
     const handleRedirectRouterHome = ()=> {
         handleClose();
         navigate('/');
@@ -94,6 +98,8 @@ function Header() {
                     <MenuItem onClick={handleRedirectRouterHome}>Home</MenuItem>
                     <MenuItem onClick={handleRedirectRouterVideos}>Videos Category</MenuItem>
                     <MenuItem onClick={handleRedirectRouterImages}>Images Category</MenuItem>
+                    <MenuItem onClick={handleRedirectRouterProfile}>Profile</MenuItem>
+
                 </Menu>
 
 

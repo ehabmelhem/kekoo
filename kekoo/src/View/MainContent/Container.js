@@ -57,7 +57,7 @@ function Container() {
                                             </div>
                                     </SwiperSlide>
                                     <SwiperSlide key={`${index+1}`}>
-                                        <Video url={videosUrl[index].url} isDisplayOnProfile={false} className="swiper-slide-active" key={index} index={index} />
+                                        <Video url={videosUrl[index].url} className="swiper-slide-active" key={index} index={index} />
                                     </SwiperSlide>
 
                                 </div>

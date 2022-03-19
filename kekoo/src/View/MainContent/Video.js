@@ -69,6 +69,7 @@ function Video({url}) {
       timerVideoClick.current = null;
       onClickVideoCounter.current = 0;
       console.log("doubleClick")
+
       setIsLiked(!isLiked)
     }
     if (!timerIsPresent) {
@@ -85,6 +86,7 @@ function Video({url}) {
           // videoRef.current.currentTime = 0;
         }
         else {
+          videoRef.current.currentTime = 0;
           videoRef.current.play();
           setPlayVideo(true);
         }
@@ -124,7 +126,7 @@ function Video({url}) {
   return (
     <div className='video' >
 
-      <video playsInline autoPlay ref={videoRef}  onClick={onClickVideoHandler} className='video__player'
+      <video playsInline ref={videoRef}  onClick={onClickVideoHandler} className='video__player'
         loop src={url}></video>
    
       <VideoHeader />

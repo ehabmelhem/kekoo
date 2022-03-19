@@ -22,9 +22,6 @@ overflow: hidden !important;
     border-radius: 999px !important;
 }
 
-
-
-
 .MuiDialog-container::-webkit-scrollbar {
     display: none !important;
   }

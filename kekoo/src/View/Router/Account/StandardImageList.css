@@ -12,3 +12,25 @@
     flex-wrap: wrap;
     gap: 1px;
 }
+.video__modal{
+overflow: hidden !important;
+}
+.css-2zwj5t-MuiPaper-root-MuiDialog-paper{
+    width: 383px !important;
+}
+.css-hz1bth-MuiDialog-container{
+    border-radius: 999px !important;
+}
+
+
+
+
+.MuiDialog-container::-webkit-scrollbar {
+    display: none !important;
+  }
+  
+  /* Hide scrollbar for IE, Edge and Firefox */
+  .MuiDialog-container {
+    -ms-overflow-style: none !important;  /* IE and Edge */
+    scrollbar-width: none !important;  /* Firefox */
+  }

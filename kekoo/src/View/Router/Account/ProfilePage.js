@@ -18,6 +18,7 @@ import AvatarPic from "./Componeneties/Avatar";
 import { flexbox } from "@material-ui/system";
 import Video from "../../MainContent/Video"
 import "./ProfilePage.css";
+
 import StandardImageList from "./StandardImageList"
 const useStyles = makeStyles(theme => ({
   icon: {

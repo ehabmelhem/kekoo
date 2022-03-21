@@ -58,23 +58,24 @@ function Header() {
                 <center>
 
                     <form className="flex">
-                        <input
-                            onChange={onChangeSearchInput}
-                            placeholder="search..."
-                            type="text"
-
-                        />
-                        <IconButton>
-                            <MicIcon />
-                        </IconButton>
-                        <div className="pipline"></div>
-                        <IconButton
+                    <IconButton
                             disabled={!searchInput}
                             onClick={onClickSearchHandler}
                             type="submit"
                         >
                             <SearchIcon />
                         </IconButton>
+                        <input
+                            onChange={onChangeSearchInput}
+                            placeholder="search..."
+                            type="text"
+
+                        />
+                        <IconButton className='header__mic__icon'>
+                            <MicIcon fontSize="large"/>
+                        </IconButton>
+                        {/* <div className="pipline"></div> */}
+               
                     </form>
                 </center>
                 <IconButton

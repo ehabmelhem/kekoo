@@ -69,7 +69,6 @@ function SimpleDialog(props) {
     </Dialog>
   );
 }
-
 SimpleDialog.propTypes = {
   onClose: PropTypes.func.isRequired,
   open: PropTypes.bool.isRequired,
@@ -88,7 +87,7 @@ export default function VideoModal({ setIndex, currentIndex, open, index, setOpe
   };
 
   return (
-    <div>
+    <div >
       <SimpleDialog
         url={url}
         open={currentIndex === index}

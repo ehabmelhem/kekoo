@@ -1,3 +1,6 @@
 .video_image_card{
-    border: 1px solid black;
+    border: 1px solid lightgray;
+    padding: 5px;
+    height: 100%;
+    border-radius: 20px;
 }

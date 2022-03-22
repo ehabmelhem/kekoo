@@ -4,6 +4,7 @@
     padding: 15px !important;
     outline: none !important;
     border: none !important;
-    background-color: rgb(186, 110, 209) !important; 
+    background-color: rgba(70, 58, 73, 0.363) !important; 
     color: white !important;
+    border: 1px solid transparent !important;
 }

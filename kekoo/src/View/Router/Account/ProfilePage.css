@@ -1,6 +1,7 @@
 .store__profile__video__content{
   width: fit-content;
   margin: 0 auto;
+  margin-top: 10px;
 }
 .store__profile__content{
   display: flex;

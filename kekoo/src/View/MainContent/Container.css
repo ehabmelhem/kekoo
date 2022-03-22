@@ -27,3 +27,7 @@
     position: absolute;
     left: 100px;
 } */
+.main__container{
+    width: fit-content;
+    margin: 0 auto;
+}

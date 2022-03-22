@@ -9,7 +9,7 @@ import ChatbotComponent from './View/MainContent/Chatbot/Componenties/ChatbotCom
 import ProfilePage from './View/Router/Account/ProfilePage'
 import { BrowserRouter as Router, Route } from 'react-router-dom';
 import './App.css'
-
+import HomeSideBar from "./View/HomeSideBar/HomeSideBar"
 function AppContainer() {
   return (
     <div className='app_container'>
@@ -44,12 +44,15 @@ function App() {
     <div>
      
       <Header />
+      <div className="bar">
+      <HomeSideBar/>
       <Routes>
         <Route path="/" element={<AppContainer />} />
         <Route path="/gimages" element={<ImagesPage />} />
         <Route path="/gvideos" element={<VideoCategoryPage />} />
         <Route path="/profile" element={<Profilegage />} />
       </Routes>
+      </div>
       <ChatbotComponent/>
     </div>
   );

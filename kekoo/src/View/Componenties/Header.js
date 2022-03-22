@@ -51,9 +51,9 @@ function Header() {
         <header id="header" className="header">
             <div className="container">
                 <div className="header__logo">
-                    {/* <a href="/">
-                        <img src="/Images\frontend24-white-171x30.png" alt="" />
-                    </a> */}
+                    {/* <a href="/"> */}
+                        <img style={{width:"100px", marginTop:"-20px", objectFit:"contain"}} src="/Images/logo/kekoo.png" alt="" />
+                    {/* </a> */}
                 </div>
                 <center>
 

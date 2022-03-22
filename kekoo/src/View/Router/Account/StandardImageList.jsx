@@ -3,6 +3,8 @@ import ImageList from '@mui/material/ImageList';
 import ImageListItem from '@mui/material/ImageListItem';
 import "./StandardImageList.css";
 import VideoModal from './Componeneties/VideoModal';
+import VideoUrl from "../../../Videos/download.mp4"; 
+
 function Card({src, open, setOpen,index, setIndex }){
     const videoRef = React.useRef(null);
     const onClickVideoHandler = ()=>{
@@ -44,51 +46,51 @@ export default function StandardImageList() {
 
 const itemData = [
   {
-    img: 'https://v16-webapp.tiktok.com/80c1dd2c439be1039a1cc333baa1bd6d/62392932/video/tos/alisg/tos-alisg-pve-0037c001/2217c11491bc41e2b9378fa968fca252/?a=1988&br=4386&bt=2193&cd=0%7C0%7C1%7C0&ch=0&cr=0&cs=0&cv=1&dr=0&ds=3&er=&ft=XOQ9-39Znz7ThPOFMDXq&l=2022032119405301022310215214827FA5&lr=tiktok_m&mime_type=video_mp4&net=0&pl=0&qs=0&rc=M3Y8dzM6ZnFyOzMzODczNEApOjk2NjlmZGRpNzg5Zmg5ZWdfcDM1cjRvam9gLS1kMS1zczNhLmMyMDViMTBhNC42MS46Yw%3D%3D&vl=&vr=',
+    img: VideoUrl,
     title: 'Breakfast',
   },
   {
-    img: 'https://v16-webapp.tiktok.com/80c1dd2c439be1039a1cc333baa1bd6d/62392932/video/tos/alisg/tos-alisg-pve-0037c001/2217c11491bc41e2b9378fa968fca252/?a=1988&br=4386&bt=2193&cd=0%7C0%7C1%7C0&ch=0&cr=0&cs=0&cv=1&dr=0&ds=3&er=&ft=XOQ9-39Znz7ThPOFMDXq&l=2022032119405301022310215214827FA5&lr=tiktok_m&mime_type=video_mp4&net=0&pl=0&qs=0&rc=M3Y8dzM6ZnFyOzMzODczNEApOjk2NjlmZGRpNzg5Zmg5ZWdfcDM1cjRvam9gLS1kMS1zczNhLmMyMDViMTBhNC42MS46Yw%3D%3D&vl=&vr=',
+    img: VideoUrl,
     title: 'Burger',
   },
   {
-    img: 'https://v16-webapp.tiktok.com/80c1dd2c439be1039a1cc333baa1bd6d/62392932/video/tos/alisg/tos-alisg-pve-0037c001/2217c11491bc41e2b9378fa968fca252/?a=1988&br=4386&bt=2193&cd=0%7C0%7C1%7C0&ch=0&cr=0&cs=0&cv=1&dr=0&ds=3&er=&ft=XOQ9-39Znz7ThPOFMDXq&l=2022032119405301022310215214827FA5&lr=tiktok_m&mime_type=video_mp4&net=0&pl=0&qs=0&rc=M3Y8dzM6ZnFyOzMzODczNEApOjk2NjlmZGRpNzg5Zmg5ZWdfcDM1cjRvam9gLS1kMS1zczNhLmMyMDViMTBhNC42MS46Yw%3D%3D&vl=&vr=',
+    img: VideoUrl,
     title: 'Camera',
   },
   {
-    img: 'https://v16-webapp.tiktok.com/80c1dd2c439be1039a1cc333baa1bd6d/62392932/video/tos/alisg/tos-alisg-pve-0037c001/2217c11491bc41e2b9378fa968fca252/?a=1988&br=4386&bt=2193&cd=0%7C0%7C1%7C0&ch=0&cr=0&cs=0&cv=1&dr=0&ds=3&er=&ft=XOQ9-39Znz7ThPOFMDXq&l=2022032119405301022310215214827FA5&lr=tiktok_m&mime_type=video_mp4&net=0&pl=0&qs=0&rc=M3Y8dzM6ZnFyOzMzODczNEApOjk2NjlmZGRpNzg5Zmg5ZWdfcDM1cjRvam9gLS1kMS1zczNhLmMyMDViMTBhNC42MS46Yw%3D%3D&vl=&vr=',
+    img: VideoUrl,
     title: 'Coffee',
   },
   {
-    img: 'https://v16-webapp.tiktok.com/80c1dd2c439be1039a1cc333baa1bd6d/62392932/video/tos/alisg/tos-alisg-pve-0037c001/2217c11491bc41e2b9378fa968fca252/?a=1988&br=4386&bt=2193&cd=0%7C0%7C1%7C0&ch=0&cr=0&cs=0&cv=1&dr=0&ds=3&er=&ft=XOQ9-39Znz7ThPOFMDXq&l=2022032119405301022310215214827FA5&lr=tiktok_m&mime_type=video_mp4&net=0&pl=0&qs=0&rc=M3Y8dzM6ZnFyOzMzODczNEApOjk2NjlmZGRpNzg5Zmg5ZWdfcDM1cjRvam9gLS1kMS1zczNhLmMyMDViMTBhNC42MS46Yw%3D%3D&vl=&vr=',
+    img: VideoUrl,
     title: 'Hats',
   },
   {
-    img: 'https://v16-webapp.tiktok.com/80c1dd2c439be1039a1cc333baa1bd6d/62392932/video/tos/alisg/tos-alisg-pve-0037c001/2217c11491bc41e2b9378fa968fca252/?a=1988&br=4386&bt=2193&cd=0%7C0%7C1%7C0&ch=0&cr=0&cs=0&cv=1&dr=0&ds=3&er=&ft=XOQ9-39Znz7ThPOFMDXq&l=2022032119405301022310215214827FA5&lr=tiktok_m&mime_type=video_mp4&net=0&pl=0&qs=0&rc=M3Y8dzM6ZnFyOzMzODczNEApOjk2NjlmZGRpNzg5Zmg5ZWdfcDM1cjRvam9gLS1kMS1zczNhLmMyMDViMTBhNC42MS46Yw%3D%3D&vl=&vr=',
+    img: VideoUrl,
     title: 'Honey',
   },
   {
-    img: 'https://v16-webapp.tiktok.com/80c1dd2c439be1039a1cc333baa1bd6d/62392932/video/tos/alisg/tos-alisg-pve-0037c001/2217c11491bc41e2b9378fa968fca252/?a=1988&br=4386&bt=2193&cd=0%7C0%7C1%7C0&ch=0&cr=0&cs=0&cv=1&dr=0&ds=3&er=&ft=XOQ9-39Znz7ThPOFMDXq&l=2022032119405301022310215214827FA5&lr=tiktok_m&mime_type=video_mp4&net=0&pl=0&qs=0&rc=M3Y8dzM6ZnFyOzMzODczNEApOjk2NjlmZGRpNzg5Zmg5ZWdfcDM1cjRvam9gLS1kMS1zczNhLmMyMDViMTBhNC42MS46Yw%3D%3D&vl=&vr=',
+    img: VideoUrl,
     title: 'Basketball',
   },
   {
-    img: 'https://v16-webapp.tiktok.com/80c1dd2c439be1039a1cc333baa1bd6d/62392932/video/tos/alisg/tos-alisg-pve-0037c001/2217c11491bc41e2b9378fa968fca252/?a=1988&br=4386&bt=2193&cd=0%7C0%7C1%7C0&ch=0&cr=0&cs=0&cv=1&dr=0&ds=3&er=&ft=XOQ9-39Znz7ThPOFMDXq&l=2022032119405301022310215214827FA5&lr=tiktok_m&mime_type=video_mp4&net=0&pl=0&qs=0&rc=M3Y8dzM6ZnFyOzMzODczNEApOjk2NjlmZGRpNzg5Zmg5ZWdfcDM1cjRvam9gLS1kMS1zczNhLmMyMDViMTBhNC42MS46Yw%3D%3D&vl=&vr=',
+    img: VideoUrl,
     title: 'Fern',
   },
   {
-    img: 'https://v16-webapp.tiktok.com/80c1dd2c439be1039a1cc333baa1bd6d/62392932/video/tos/alisg/tos-alisg-pve-0037c001/2217c11491bc41e2b9378fa968fca252/?a=1988&br=4386&bt=2193&cd=0%7C0%7C1%7C0&ch=0&cr=0&cs=0&cv=1&dr=0&ds=3&er=&ft=XOQ9-39Znz7ThPOFMDXq&l=2022032119405301022310215214827FA5&lr=tiktok_m&mime_type=video_mp4&net=0&pl=0&qs=0&rc=M3Y8dzM6ZnFyOzMzODczNEApOjk2NjlmZGRpNzg5Zmg5ZWdfcDM1cjRvam9gLS1kMS1zczNhLmMyMDViMTBhNC42MS46Yw%3D%3D&vl=&vr=',
+    img: VideoUrl,
     title: 'Mushrooms',
   },
   {
-    img: 'https://v16-webapp.tiktok.com/80c1dd2c439be1039a1cc333baa1bd6d/62392932/video/tos/alisg/tos-alisg-pve-0037c001/2217c11491bc41e2b9378fa968fca252/?a=1988&br=4386&bt=2193&cd=0%7C0%7C1%7C0&ch=0&cr=0&cs=0&cv=1&dr=0&ds=3&er=&ft=XOQ9-39Znz7ThPOFMDXq&l=2022032119405301022310215214827FA5&lr=tiktok_m&mime_type=video_mp4&net=0&pl=0&qs=0&rc=M3Y8dzM6ZnFyOzMzODczNEApOjk2NjlmZGRpNzg5Zmg5ZWdfcDM1cjRvam9gLS1kMS1zczNhLmMyMDViMTBhNC42MS46Yw%3D%3D&vl=&vr=',
+    img: VideoUrl,
     title: 'Tomato basil',
   },
   {
-    img: 'https://v16-webapp.tiktok.com/80c1dd2c439be1039a1cc333baa1bd6d/62392932/video/tos/alisg/tos-alisg-pve-0037c001/2217c11491bc41e2b9378fa968fca252/?a=1988&br=4386&bt=2193&cd=0%7C0%7C1%7C0&ch=0&cr=0&cs=0&cv=1&dr=0&ds=3&er=&ft=XOQ9-39Znz7ThPOFMDXq&l=2022032119405301022310215214827FA5&lr=tiktok_m&mime_type=video_mp4&net=0&pl=0&qs=0&rc=M3Y8dzM6ZnFyOzMzODczNEApOjk2NjlmZGRpNzg5Zmg5ZWdfcDM1cjRvam9gLS1kMS1zczNhLmMyMDViMTBhNC42MS46Yw%3D%3D&vl=&vr=',
+    img: VideoUrl,
     title: 'Sea star',
   },
   {
-    img: 'https://v16-webapp.tiktok.com/80c1dd2c439be1039a1cc333baa1bd6d/62392932/video/tos/alisg/tos-alisg-pve-0037c001/2217c11491bc41e2b9378fa968fca252/?a=1988&br=4386&bt=2193&cd=0%7C0%7C1%7C0&ch=0&cr=0&cs=0&cv=1&dr=0&ds=3&er=&ft=XOQ9-39Znz7ThPOFMDXq&l=2022032119405301022310215214827FA5&lr=tiktok_m&mime_type=video_mp4&net=0&pl=0&qs=0&rc=M3Y8dzM6ZnFyOzMzODczNEApOjk2NjlmZGRpNzg5Zmg5ZWdfcDM1cjRvam9gLS1kMS1zczNhLmMyMDViMTBhNC42MS46Yw%3D%3D&vl=&vr=',
+    img: VideoUrl,
     title: 'Bike',
   },
 ];

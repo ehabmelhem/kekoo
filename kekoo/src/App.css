@@ -13,3 +13,11 @@ html{
   /* Video vars */
   --video-color:rgb(185, 130, 236);
 }
+.bar{
+  display: flex;
+  width: 100%;
+}
+.app_container{
+  width: fit-content;
+  margin: 0 auto;
+}
